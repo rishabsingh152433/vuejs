@@ -1,0 +1,33 @@
+
+
+<div id="app"> 
+    <ul>
+        <li v-for="data in record" :style="{color:'data.eyecolor'}">{{data.eyeColor}} </li>
+    </ul>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+            name:'siddharth',
+            status:true,
+           message: 'Hello Vue!',
+
+          record:[
+
+{firstName:"A", lastName:"c", age:501, eyeColor:"blue"},
+{firstName:"b", lastName:"v", age:520, eyeColor:"red"},
+{firstName:"c", lastName:"w", age:530, eyeColor:"green"},
+{firstName:"d", lastName:"z", age:550, eyeColor:"yellow"}
+    ]
+
+        }
+        
+      }
+    }).mount('#app')
+
+</script>

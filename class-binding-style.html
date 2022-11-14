@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .active{color:green;}.notactive{color: red}
+</style>
+    
+<div id="app">
+
+<h1 :class="{active:isActive, 'notactive' :notactive}">{{name}}</h1>
+
+<h1 :class="[isActive ? 'active':'notactive']">{{name}}</h1>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+    const {createApp}= Vue
+    createApp({
+        data(){
+            return{
+                isActive:false,
+                notactive:false,
+                name:'data'
+            }
+        }
+    }).mount('#app')
+</script>
+
+

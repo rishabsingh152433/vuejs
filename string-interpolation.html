@@ -1,0 +1,18 @@
+<div id="app">{{number}}
+
+    <h1>user is {{status ? "isActive" :"Not Active"}}</h1>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+const {createApp} = Vue;
+
+createApp ({
+    data() {
+        return{
+            number:10,
+            status:true
+        }
+    }
+}).mount('#app')
+
+</script>

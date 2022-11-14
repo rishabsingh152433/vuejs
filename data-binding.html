@@ -1,0 +1,23 @@
+
+
+<div id="app"> 
+<a :href="url">{{url}}</a> 
+
+<div :data="message">{{message}}</div>
+
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue!',
+          url:"https://stackoverflow.com/questions/42343778/vue-is-not-a-constructor"
+        }
+      }
+    }).mount('#app')
+
+</script>

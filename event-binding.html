@@ -1,0 +1,44 @@
+<div id="app">
+
+<button @click="increasefontsize">Fontsize</button>
+
+<button @click="decresefontsize">Decrese</button>
+    <div :style="{color:'green',fontSize:fontSize+'px'}">{{message}}</div>
+
+    <div :style="[styleObject,styleObject2]">{{message}}</div>
+
+</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const { createApp } = Vue
+    createApp({
+        data(){
+            return{
+                fontSize:30,
+                message:"data",
+                styleObject:{
+
+                    color:'blue',
+                    fontSize:'35px'
+                },
+                styleObject2:{
+                    color:'red',
+                    fontSize:'18px'
+                }
+            }
+        },
+        methods:{
+            increasefontsize(){
+                this.fontSize++;
+            }, 
+
+            decresefontsize(){
+                this.fontSize--;
+            }, 
+        }
+    }).mount('#app')
+</script>
+
+

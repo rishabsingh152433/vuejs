@@ -1,0 +1,23 @@
+<div id="app">{{number}}
+
+    <h1>user is {{status ? "isActive" :"Not Active"}}</h1>
+    <form>
+        <input type="text" v-model="name" placeholder="Enter your name">
+    </form>
+    {{name}}
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+const {createApp} = Vue;
+
+createApp ({
+    data() {
+        return{
+            name:'',
+            number:10,
+            status:true
+        }
+    }
+}).mount('#app')
+
+</script>

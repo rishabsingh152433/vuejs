@@ -1,0 +1,25 @@
+
+
+<div id="app"> {{message}}
+    
+<h2>{{reverse1}}</h2>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue!'
+        }
+      },
+      computed:{
+        reverse1(){
+            return this.message.split('').reverse('').join('');
+        }
+      }
+    }).mount('#app')
+
+</script>

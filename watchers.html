@@ -1,0 +1,23 @@
+<div id="app">{{record}}</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+const {createApp} = Vue
+
+createApp({
+    data(){
+        return{
+            record:'anil',
+            status:true,
+        };
+        watch:{
+            
+            console.log('here');
+
+        }
+    }
+}).mount('#app')
+
+
+</script>
